@@ -1,0 +1,193 @@
+/* Utility Styling Starts Here */
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #FFF;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+}
+/* Utility Styling Ends Here */
+/* Nav Menu Styling Starts Here */
+.navbar {
+    background-color: teal;
+    color: #FFF;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* padding: 25; */
+}
+.nav-links div > li > a {
+    color: #FFF;
+}
+.branding {
+    font-size: 32px;
+    margin-left: 15px;
+}
+.menu-items {
+    padding-right: 15px;
+    display: flex;
+    gap: 1em;
+    font-size: 18px;
+}
+.menu-items > li {
+    padding: 5px 14px;
+}
+.menu-items > li:hover, .menu-items > .active {
+    background-color: #4C9E9E;
+    border-radius: 5px;
+    transition: .3s ease;
+}
+/* Nav Menu Styling Starts Here */
+/* Responsive Menu Implementation Starts Here */
+input[type=checkbox]{
+    display: none;
+}
+.hamburger {
+    display: none;
+    font-size: 24px;
+    user-select: none;
+    margin-right: 15px;
+}
+/* use media queries for device size variation */
+@media (max-width:768px){
+
+    .menu-items {
+        display: none;
+        position: absolute;
+        background-color: teal;
+        right: 0;
+        left: 0;
+        text-align: center;
+        padding: 16px 0;
+    }
+    .menu-items > li {
+        text-decoration: underline;
+        text-underline-position: under;
+    }
+    .menu-items > li:hover {
+        display: inline-block;
+        background-color: #4C9E9E;
+        transition: .3s ease;
+    }
+    .menu-items li + li {
+        margin-top: 12px;
+    }
+    input[type=checkbox]:checked ~ .menu-items {
+        display: block;
+    }
+    .hamburger {
+        display: block;
+    }
+}
+/* Responsive Menu Implementation Ends Here */
+/* Nav Menu Styling Ends Here */
+/* User Layout Styling Starts Here */
+.container {
+        width: 50%;
+        /* height: 380px; */
+        text-align: center;
+        padding: 25px;
+        margin: 55px auto;
+        border-radius: 15px;
+        box-sizing: border-box;
+        background: #ecf0f3;
+        box-shadow: 14px 14px 20px #cbced1, -14px -14px 20px white;
+}
+.page-header {
+    font-size: 26px;
+    font-weight: 900;
+    margin-bottom: 25px;
+    text-decoration: underline;
+    text-underline-position: under;
+    letter-spacing: 1px;
+}
+.input-box {
+    position: relative;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+.input-box > label {
+    position: absolute;
+    left: 25px;
+    top: -15px;
+    font-size: 18px;
+}
+.input-box > input {
+    background: #ECF0F3;
+    width: 90%;
+    height: 42px;
+    padding: 10px;
+    padding-left: 20px;
+    font-size: 24px;
+    border-radius: 50px;
+    box-shadow: inset 6px 6px 6px #CBCED1, inset -6px -6px 6px #FFF;
+    border: 0px solid transparent;
+    transition: .3s ease-out;
+}
+.input-box > input::placeholder {
+    color: gray;
+}
+.input-box > select {
+    background: #ECF0F3;
+    width: 96%;
+    height: 63px;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 24px;
+    border-radius: 50px;
+    box-shadow: inset 6px 6px 6px #CBCED1, inset -6px -6px 6px #FFF;
+    border: 0px solid transparent;
+    cursor: pointer;
+}
+.input-box >button {
+    width: 95%;
+    height: 55px;
+    border-radius: 50px;
+    font-size: 24px;
+    letter-spacing: 15px;
+    color: #FFF;
+    margin-top: 20px;
+    background-color: teal;
+    cursor: pointer;
+    font-weight: 900;
+    box-shadow: 6px 6px 6px #CBCED1, -6px -6px 6px white;
+    border: 0px solid transparent;
+    transition: .5s;
+}
+.no-value {
+    border: 2px solid red !important;
+}
+@media (max-width: 768px){
+    .container {
+        width: 90%;
+        padding: 20px 0;
+    }
+    .page-header {
+        margin-bottom: 40px;
+    }
+}
+/* User Layout Styling Ends Here */
+
+/* Result Sort List Styling Starts Here */
+.sort-values {
+    display: inline-flex;
+    justify-content: center;
+    padding: 0;
+    width: 100%;
+    overflow-x: auto;
+}
+.sort-values > li {
+    margin: 5px;
+    padding: 5px;
+    border: 1px solid;
+}
+/* Result Sort List Styling Starts Here */
